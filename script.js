@@ -1,7 +1,6 @@
 /* --- THEME SWITCHER LOGIC --- */
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 
-// ตรวจสอบว่ามีตีมที่เซฟไว้ใน localStorage หรือไม่
 if (localStorage.getItem('theme') === 'gray-yellow') {
     document.body.classList.add('theme-gray-yellow');
 }
@@ -9,7 +8,6 @@ if (localStorage.getItem('theme') === 'gray-yellow') {
 themeToggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('theme-gray-yellow');
     
-    // บันทึกสถานะตีมลงใน LocalStorage
     if (document.body.classList.contains('theme-gray-yellow')) {
         localStorage.setItem('theme', 'gray-yellow');
     } else {
@@ -26,7 +24,6 @@ menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
 
-// ปิดเมนูมือถือเมื่อกดลิงก์ (เพิ่ม UX)
 document.querySelectorAll('.nav-list a').forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('is-active');
@@ -53,7 +50,6 @@ const translations = {
         hero_desc: "You can call me Liger!.",
         click_hint: "Tap card to flip",
         
-        // Projects
         proj_title: "Featured Projects",
         proj_1_title: "Comcare Shop",
         proj_1_short: "Website for a one-stop computer sales, repair, and assembly shop.",
@@ -63,16 +59,15 @@ const translations = {
         proj_2_short: "Automated Data Processing Tool.",
         proj_2_desc: "An automation script built with Python (PyAutoGUI/Selenium) to streamline workflow with legacy software 'EasyFo'. It automatically processes PDF files and enters data, significantly reducing manual error and processing time.",
         
-        // OWASP UPDATED
-        proj_3_title: "OWASP Top 10 (2025) Presentation",
-        proj_3_short: "Educational slide deck on the latest web security risks.",
-        proj_3_desc: "A comprehensive presentation designed to educate developers and IT professionals about the OWASP Top 10 vulnerabilities for 2025, including mitigation strategies and real-world examples.",
+        // อัปเดตข้อมูลเป็นโปรเจกต์กระดูกหัก (ภาษาอังกฤษ)
+        proj_3_title: "Bone Fracture Education",
+        proj_3_short: "Educational website about bone fractures.",
+        proj_3_desc: "An educational website providing foundational medical knowledge about different types of bone fractures, symptoms, and basic first aid. Designed to be accessible and easy to understand.",
 
         proj_4_title: "Reactor",
         proj_4_short: "Show images based on gestures",
         proj_4_desc: "A reactor that show images based on gestures",
 
-        // Graphics
         graph_title: "Graphic Design Gallery",
         tap_image_hint: "Tap an image to enlarge",
         
@@ -89,7 +84,6 @@ const translations = {
         hero_desc: "เรียกผมว่าไลเกอร์ก็ได้ครับ!",
         click_hint: "แตะที่บัตรเพื่อกลับด้าน",
         
-        // Projects
         proj_title: "ผลงานที่ภูมิใจ",
         proj_1_title: "ระบบ ComCare Shop",
         proj_1_short: "เว็บไซต์สำหรับร้านขายและซ่อมประกอบคอมครบวงจร",
@@ -99,16 +93,15 @@ const translations = {
         proj_2_short: "โปรแกรมช่วยทำงานอัตโนมัติ",
         proj_2_desc: "สคริปต์ Python สำหรับทำ GUI Automation เพื่อทำงานกับโปรแกรม EasyFo ช่วยจัดการไฟล์ PDF และกรอกข้อมูลตัวเลขแบบอัตโนมัติ เพื่อช่วยลดความผิดพลาดและประหยัดเวลา",
         
-        // OWASP UPDATED
-        proj_3_title: "สไลด์ให้ความรู้ OWASP Top 10 (2025)",
-        proj_3_short: "สไลด์พรีเซนเทชันสรุปความเสี่ยงด้านความปลอดภัยของเว็บแอปพลิเคชันล่าสุด",
-        proj_3_desc: "ผลงานการจัดทำสไลด์นำเสนอ (PowerPoint) เพื่อให้ความรู้เกี่ยวกับช่องโหว่ความปลอดภัย OWASP Top 10 ประจำปี 2025 สรุปเนื้อหาให้อ่านเข้าใจง่าย เหมาะสำหรับใช้บรรยายให้นักพัฒนาซอฟต์แวร์และทีมไอที พร้อมแนวทางการป้องกัน",
+        // อัปเดตข้อมูลเป็นโปรเจกต์กระดูกหัก (ภาษาไทย)
+        proj_3_title: "เว็บไซต์ความรู้เรื่องกระดูกหัก",
+        proj_3_short: "เว็บไซต์ให้ความรู้เบื้องต้นเกี่ยวกับภาวะกระดูกหัก",
+        proj_3_desc: "เว็บไซต์ให้ความรู้ทางการแพทย์เบื้องต้น รวบรวมข้อมูลเกี่ยวกับประเภทของกระดูกหัก อาการที่พบ และวิธีการปฐมพยาบาลเบื้องต้น นำเสนอในรูปแบบที่อ่านง่ายและทำความเข้าใจได้รวดเร็ว",
 
         proj_4_title: "ตรวจจับท่าทาง",
         proj_4_short: "แสดงรูปตามท่าทางต่างๆที่กำหนดไว้",
         proj_4_desc: "เมื่อแสดงท่าทางต่างๆ เช่น ชูนิ้วขึ้น อยู่นิ่ง จะแสดงรูปตามที่ได้กำหนดไว้",
 
-        // Graphics
         graph_title: "ผลงานออกแบบกราฟิก",
         tap_image_hint: "แตะที่รูปเพื่อดูขนาดเต็ม",
         
@@ -166,7 +159,6 @@ document.querySelectorAll('.open-modal').forEach(button => {
             modalDesc.textContent = translations[lang][descKey];
         }
 
-        // Logic for YouTube Button
         if (videoUrl && videoUrl !== "") {
             modalLink.href = videoUrl;
             modalLink.style.display = "inline-block";
@@ -174,7 +166,6 @@ document.querySelectorAll('.open-modal').forEach(button => {
             modalLink.style.display = "none";
         }
 
-        // Logic for Try Demo Button
         if (demoUrl && demoUrl !== "") {
             modalDemoBtn.href = demoUrl;
             modalDemoBtn.style.display = "inline-block";
@@ -206,7 +197,6 @@ closeLightbox.addEventListener('click', () => {
     lightbox.style.display = "none";
 });
 
-// ฟังก์ชันปิด Modals ครอบคลุมทั้งการคลิกพื้นที่ว่างและการกดปุ่ม ESC
 function closeAllModals() {
     modal.style.display = "none";
     lightbox.style.display = "none";
@@ -218,7 +208,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// เพิ่มการกด ESC เพื่อปิด Modal (UX ที่ดี)
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
         closeAllModals();
