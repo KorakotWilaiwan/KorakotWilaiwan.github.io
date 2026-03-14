@@ -28,7 +28,6 @@
                     <span id="btn-en" class="active-lang">EN</span> | 
                     <span id="btn-th">TH</span>
                 </li>
-                <!-- ปุ่มสลับตีม -->
                 <li class="theme-switch">
                     <button id="theme-toggle-btn" title="Toggle Theme">
                         <i class="fa-solid fa-palette"></i>
@@ -47,7 +46,6 @@
                 <h1 data-i18n="hero_greeting">Hello, I'm Korakot</h1>
                 <p data-i18n="hero_desc">You can call me Liger!.</p>
             </div>
-            <!-- เอา onclick ออก และใส่ id="flip-card" แทนเพื่อไปจัดการใน JS -->
             <div class="card-container" id="flip-card">
                 <div class="card-flipper">
                     <div class="card-front">
@@ -93,13 +91,13 @@
             </div>
 
             <div class="card">
-                <h3 data-i18n="proj_3_title">Cybersecurity Report</h3>
-                <p data-i18n="proj_3_short">OWASP TOP 10 Report</p>
+                <h3 data-i18n="proj_3_title">Bone Fracture Education</h3>
+                <p data-i18n="proj_3_short">Educational website about bone fractures.</p>
                 <button class="btn-outline open-modal" 
                         data-title-key="proj_3_title" 
                         data-desc-key="proj_3_desc"
-                        data-link="https://youtu.be/t-ohYx5qUx0"
-                        data-demo-link="" 
+                        data-link="" 
+                        data-demo-link="https://jdiflop.github.io/fracture/index.html" 
                         data-i18n="view_project">
                     View Project
                 </button>
@@ -176,7 +174,7 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/d/1G9hkLmWfVIOayBk7HU5rpW0H8VhiUCiU" alt="Graphic Design 9" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+9'">
+                <img src="https://lh3.googleusercontent.com/d/1Frdw_8tt2iHBB6kCWuguclOCDrVVuPkv" alt="Graphic Design 9" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+9'">
                 <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
                 <div class="overlay"><p>Artwork 09</p></div>
             </div>
@@ -185,17 +183,16 @@
     </section>
 
     <footer id="contact">
-        <p>&copy;Korakot Wilaiwan.</p>
+        <p>© Korakot Wilaiwan.</p>
     </footer>
 
     <div id="project-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <span class="close-modal">×</span>
             <h2 id="modal-title">Project Title</h2>
             <p id="modal-desc">Project description goes here...</p>
             
             <div class="modal-buttons">
-                <!-- เพิ่ม rel="noopener noreferrer" เพื่อความปลอดภัย -->
                 <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-fill" style="display: none;">
                     <i class="fa-brands fa-youtube"></i> <span data-i18n="watch_demo">Watch Demo</span>
                 </a>
@@ -208,7 +205,7 @@
     </div>
 
     <div id="image-modal" class="modal lightbox">
-        <span class="close-lightbox">&times;</span>
+        <span class="close-lightbox">×</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
