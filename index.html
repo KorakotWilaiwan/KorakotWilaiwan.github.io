@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korakot's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#graphics" data-i18n="nav_graphics">Graphics</a></li>
+                <li class="lang-switch">
+                    <span id="btn-en" class="active-lang">EN</span> | 
+                    <span id="btn-th">TH</span>
+                </li>
+                <!-- ปุ่มสลับตีม -->
+                <li class="theme-switch">
+                    <button id="theme-toggle-btn" title="Toggle Theme">
+                        <i class="fa-solid fa-palette"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="profile-section">
+                <div class="avatar-wrapper">
+                    <img src="./assets/img/my-avatar.png" alt="My Avatar" class="avatar-img" onerror="this.style.display='none'">
+                </div>
+                <h1 data-i18n="hero_greeting">Hello, I'm Korakot</h1>
+                <p data-i18n="hero_desc">You can call me Liger!.</p>
+            </div>
+            <!-- เอา onclick ออก และใส่ id="flip-card" แทนเพื่อไปจัดการใน JS -->
+            <div class="card-container" id="flip-card">
+                <div class="card-flipper">
+                    <div class="card-front">
+                        <img src="./assets/img/back-01.png" alt="Logo KW" onerror="this.src='https://placehold.co/500x300?text=Logo+Missing'">
+                    </div>
+                    <div class="card-back">
+                        <img src="./assets/img/front-01.png" alt="Contact Info" onerror="this.src='https://placehold.co/500x300?text=Contact+Missing'">
+                    </div>
+                </div>
+                <p class="click-hint" data-i18n="click_hint">Tap card to flip</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 data-i18n="proj_title">Featured Projects</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <h3 data-i18n="proj_1_title">Comcare Shop</h3>
+                <p data-i18n="proj_1_short">Website for a one-stop computer sales, repair, and assembly shop.</p>
+                <button class="btn-outline open-modal" 
+                        data-title-key="proj_1_title" 
+                        data-desc-key="proj_1_desc"
+                        data-link="https://youtu.be/Fxwa2_dxGPs"
+                        data-demo-link="https://comcare-shop.vercel.app" 
+                        data-i18n="view_project">
+                    View Project
+                </button>
+            </div>
+
+            <div class="card">
+                <h3 data-i18n="proj_2_title">Auto-GUI Python</h3>
+                <p data-i18n="proj_2_short">Automated Data Processing Tool.</p>
+                <button class="btn-outline open-modal" 
+                        data-title-key="proj_2_title" 
+                        data-desc-key="proj_2_desc"
+                        data-link="https://youtu.be/HDxgPf3DXb0"
+                        data-demo-link="" 
+                        data-i18n="view_project">
+                    View Project
+                </button>
+            </div>
+
+            <div class="card">
+                <h3 data-i18n="proj_3_title">Cybersecurity Report</h3>
+                <p data-i18n="proj_3_short">OWASP TOP 10 Report</p>
+                <button class="btn-outline open-modal" 
+                        data-title-key="proj_3_title" 
+                        data-desc-key="proj_3_desc"
+                        data-link="https://youtu.be/t-ohYx5qUx0"
+                        data-demo-link="" 
+                        data-i18n="view_project">
+                    View Project
+                </button>
+            </div>
+
+            <div class="card">
+                <h3 data-i18n="proj_4_title">Reactor</h3>
+                <p data-i18n="proj_4_short">Show images based on gestures</p>
+                <button class="btn-outline open-modal" 
+                        data-title-key="proj_4_title" 
+                        data-desc-key="proj_4_desc"
+                        data-link="https://youtube.com/shorts/zJR0re1TODw?feature=share"
+                        data-demo-link="" 
+                        data-i18n="view_project">
+                    View Project
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="graphics" class="container bg-alt">
+        <h2 data-i18n="graph_title" style="margin-bottom: 0.5rem;">Graphic Design Gallery</h2>
+        <p class="click-hint" style="margin-top: 0; margin-bottom: 2.5rem;" data-i18n="tap_image_hint">Tap image to enlarge</p>
+        
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1-w_rU1fortl3EvynMs_0sX7jsz1E53Pw" alt="Graphic Design 1" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+1'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 01</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1KbIgUf_FiwGDZ5-WvBNSyKT50U47SSj5" alt="Graphic Design 2" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+2'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 02</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1nUlBdgBKRi3PjNDoPn-Ait750T0nOY4e" alt="Graphic Design 3" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+3'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 03</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1PcewItnniRDHo_deWDF5I-5KLSxon5W9" alt="Graphic Design 4" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+4'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 04</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1UjeSnUrwoRIeWv0STc1gBpjKd8TckURu" alt="Graphic Design 5" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+5'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 05</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1gNFiUIz09rIFNh2o07bfXg-xbArWN1B0" alt="Graphic Design 6" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+6'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 06</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1ePknX6YB9tH6fN2lR6kR60U-QAASHwuf" alt="Graphic Design 7" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+7'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 07</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1Tzd1t4Cz8BRUcwqlQ7dCGHvG5HmmFC_R" alt="Graphic Design 8" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+8'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 08</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/d/1G9hkLmWfVIOayBk7HU5rpW0H8VhiUCiU" alt="Graphic Design 9" loading="lazy" onerror="this.src='https://placehold.co/400x533/334155/ffffff?text=Image+9'">
+                <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+                <div class="overlay"><p>Artwork 09</p></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy;Korakot Wilaiwan.</p>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-desc">Project description goes here...</p>
+            
+            <div class="modal-buttons">
+                <!-- เพิ่ม rel="noopener noreferrer" เพื่อความปลอดภัย -->
+                <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-fill" style="display: none;">
+                    <i class="fa-brands fa-youtube"></i> <span data-i18n="watch_demo">Watch Demo</span>
+                </a>
+                
+                <a id="modal-demo-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-fill btn-demo" style="display: none;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="try_demo">Try Demo</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
